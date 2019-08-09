@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'components/topPanel.dart';
 import 'package:concluder/bottom_bar_navigation_pattern/animated_bottom_bar.dart';
+import 'components/timePeriod.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,10 +53,7 @@ class _DashBoardState extends State<DashBoard> {
       bottomNavigationBar: AnimatedBottomBar(
           barItems: widget.barItems,
           animationDuration: const Duration(milliseconds: 150),
-          barStyle: BarStyle(
-              fontSize: 20.0,
-              iconSize: 30.0
-          ),
+          barStyle: BarStyle(fontSize: 20.0, iconSize: 30.0),
           onBarTap: (index) {
             setState(() {
               selectedBarIndex = index;
@@ -76,6 +74,10 @@ class MainView extends StatelessWidget {
             child: TopPanel(),
             widthFactor: 0.85,
           ),
+          FractionallySizedBox(
+            child: TimePeriod(),
+            widthFactor: 0.3,
+          )
         ],
       ),
     );

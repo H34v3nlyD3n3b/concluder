@@ -5,7 +5,7 @@ class TopPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onVerticalDragDown: (InformView) {
+      onVerticalDragDown: (InformPage) {
         Navigator.of(context).push(InformPageRoute());
       },
       child: Container(
@@ -25,15 +25,14 @@ class TopPanel extends StatelessWidget {
 
 class InformPageRoute extends MaterialPageRoute {
   InformPageRoute()
-      : super(builder: (BuildContext context) => new InformView());
+      : super(builder: (BuildContext context) => new InformPage());
 
   @override
   Widget buildPage(BuildContext context, Animation<double> animation,
       Animation<double> secondaryAnimation) {
-    return new FadeTransition(opacity: animation, child: InformView());
+    return new FadeTransition(opacity: animation, child: InformPage());
   }
 }
-
 
 class CircleImage extends StatelessWidget {
   @override

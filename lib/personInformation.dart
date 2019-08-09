@@ -1,45 +1,32 @@
 import 'package:flutter/material.dart';
 
-class InformPage extends StatelessWidget{
+class InformPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: InformView(),
-      backgroundColor: Color(0xFF091839),
-    );
-  }
-}
-
-class InformView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-   return Column(
-     children: <Widget>[
-       Expanded(
-         child: Container(
-             alignment: Alignment.topCenter,
-             child: FractionallySizedBox(
-               widthFactor: 0.85,
-               heightFactor: 0.85,
-               child: Padding(
-                 padding: const EdgeInsets.only(top: 30.0),
-                 child: Container(
-                   decoration: BoxDecoration(
-                     color: Color(0xFF888A94),
-                     borderRadius:
-                     BorderRadiusDirectional.all(Radius.circular(32.0)),
-                   ),
-                   child: Row(
-                     children: <Widget>[CircleImage(), NameAndPosition()],
-                   ),
-                 ),
-               ),
-             ),
-           ),
-       ),
-
-     ]
-   );
+    return Column(children: <Widget>[
+      Expanded(
+        child: Container(
+          alignment: Alignment.topCenter,
+          child: FractionallySizedBox(
+            widthFactor: 0.85,
+            heightFactor: 0.85,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 30.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color(0xFF888A94),
+                  borderRadius:
+                      BorderRadiusDirectional.all(Radius.circular(32.0)),
+                ),
+                child: Row(
+                  children: <Widget>[CircleImage(), NameAndPosition()],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ]);
   }
 }
 
